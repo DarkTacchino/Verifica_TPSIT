@@ -11,13 +11,15 @@
         android:layout_width="409dp"
         android:layout_height="354dp"
         android:layout_marginStart="1dp"
-        android:layout_marginTop="2dp"
+        android:layout_marginTop="100dp"
         android:layout_marginEnd="1dp"
         android:layout_marginBottom="376dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.53">
 
         <TableRow
             android:layout_width="match_parent"
@@ -46,6 +48,7 @@
                 android:layout_margin="5dp"
                 android:layout_weight="1"
                 android:backgroundTint="#FF0000"
+                android:enabled="false"
                 android:onClick="foodButtonClick"
                 android:text="Cibo"
                 android:textSize="20sp"
@@ -58,6 +61,7 @@
                 android:layout_margin="5dp"
                 android:layout_weight="1"
                 android:backgroundTint="#008800"
+                android:enabled="false"
                 android:onClick="transportButtonClick"
                 android:text="Trasporto"
                 android:textSize="17sp"
@@ -70,6 +74,7 @@
                 android:layout_margin="5dp"
                 android:layout_weight="1"
                 android:backgroundTint="#0000FF"
+                android:enabled="false"
                 android:onClick="otherButtonClick"
                 android:text="Altro"
                 android:textSize="20sp"
@@ -77,8 +82,10 @@
         </TableRow>
 
         <TableRow
+            android:id="@+id/descTableRew"
             android:layout_width="match_parent"
-            android:layout_height="match_parent">
+            android:layout_height="match_parent"
+            android:visibility="gone">
 
             <EditText
                 android:id="@+id/des"
@@ -92,8 +99,10 @@
         </TableRow>
 
         <TableRow
+            android:id="@+id/impTableRew"
             android:layout_width="match_parent"
-            android:layout_height="match_parent">
+            android:layout_height="match_parent"
+            android:visibility="gone">
 
             <EditText
                 android:id="@+id/imp"
@@ -107,8 +116,10 @@
         </TableRow>
 
         <TableRow
+            android:id="@+id/invioTableRew"
             android:layout_width="match_parent"
-            android:layout_height="match_parent">
+            android:layout_height="match_parent"
+            android:visibility="gone">
 
             <Button
                 android:id="@+id/invia"
@@ -123,6 +134,7 @@
                 android:textStyle="bold" />
         </TableRow>
     </TableLayout>
+
     <androidx.cardview.widget.CardView
         android:id="@+id/infoCardView"
         android:layout_width="0dp"
@@ -134,7 +146,8 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/tableLayout">
+        app:layout_constraintTop_toBottomOf="@id/tableLayout"
+        app:layout_constraintVertical_bias="0.61">
 
         <ScrollView
             android:id="@+id/scrollView"
